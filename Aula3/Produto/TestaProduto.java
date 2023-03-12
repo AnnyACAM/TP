@@ -1,15 +1,15 @@
-public class TestaProduto{
-    public static void main(String args[]){
+public class TestaProduto {
 
+    public static void main(String[] args) {
         PilhaSincronizada pilha = new PilhaSincronizada();
-
+        
         Producer produtor = new Producer(pilha);
-        Thread produc = new Thread(produtor);
-        produc.start();
+        Thread producer = new Thread(produtor);
+        producer.start();
 
         Consumer consumidor = new Consumer(pilha);
-        Thread consum = new Thread (consumidor);
-        consum.start();
+        Thread consumer = new Thread(consumidor);
+        consumer.start();
+        }
 
-    }
 }
