@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logic;
-
 import java.io.InputStream;
 import java.util.Scanner;
 
@@ -27,5 +25,6 @@ public class Recebedor implements Runnable {
      while (s.hasNextLine()) {
        System.out.println(s.nextLine());
      }
+     s.close();
    }
  }
